@@ -1,13 +1,22 @@
 import "./Header.css";
+import { Link } from "react-router-dom";
 
-function Header({ carCount, onSearch, onCartClick }) {
+
+function Header({onSearch,  }) {
   return (
     <header>
       <div>
         <div className="Titulo">
+          <Link to="/">
           <h1>React E-commerce</h1>
           <img src="./vite.svg" alt="logo" />
+          </Link> 
+          
         </div>
+
+        <navbar>
+          <Link to="/productos"> Productos</Link>
+        </navbar>
 
         <div className="search-section"> 
           <input 
@@ -19,10 +28,7 @@ function Header({ carCount, onSearch, onCartClick }) {
         </div>
         
         <div className="cart-section">
-          <button onClick={onCartClick} className="cart-button">
-            Carrito 🛒
-            {carCount > 0 && <span>{carCount}</span>}
-          </button>
+          <Link to ="/carrito"> Crrito</Link>
         </div>
       </div>
     </header>

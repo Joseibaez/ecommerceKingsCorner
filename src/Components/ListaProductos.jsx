@@ -1,15 +1,15 @@
 import TarjetaProducto from "./TarjetaProductos"
 
-function ListaProductos({ productos, titulo, onAgregarCarrito }) {
+function ListaProductos({ productos, titulo  }) {
   return (
     <div className="lista-productos">
       <h2>{titulo}</h2>
       <p>Mostrando {productos.length} productos</p>
       
       {productos.length === 0 ? (
-        <p className="sin-productos">No hay productos disponibles</p>
+        <p>No hay productos disponibles</p>
       ) : (
-        <div className="grid-productos">
+        <div>
           {productos.map(producto => (
             <TarjetaProducto
               key={producto.id}
@@ -18,7 +18,7 @@ function ListaProductos({ productos, titulo, onAgregarCarrito }) {
               imagen={producto.imagen}
               marca={producto.marca}
               disponible={producto.disponible}
-              onAgregarCarrito={onAgregarCarrito}
+              
             />
           ))}
         </div>

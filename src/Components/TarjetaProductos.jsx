@@ -1,7 +1,4 @@
-
 function TarjetaProducto({ nombre, precio, imagen, marca, disponible, onAgregarCarrito }) {
-
-  
   return (
     <div className="tarjeta-producto">
       <img src={imagen} alt={nombre} />
